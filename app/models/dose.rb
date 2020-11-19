@@ -1,4 +1,5 @@
 class Dose < ApplicationRecord
+  # must have a cocktail and ingredient if it belongs to teh class
   belongs_to :cocktail
   belongs_to :ingredient
   validates :description, presence: true

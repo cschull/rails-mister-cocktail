@@ -1,0 +1,31 @@
+
+<div class="menu-header">
+  <h1>Cocktail Menu</h1>
+</div>
+
+<div class="add-cocktail">
+  <%= link_to new_cocktail_path do %>
+    <div>
+      <i class="fas fa-cocktail"></i>
+    </div>
+    <div>
+      <p> Add a new cocktail </p>
+    </div>
+  <% end %>
+</div>
+
+
+<div class="cocktail-cards d-flex flex-wrap">
+  <% @cocktails.each do |cocktail| %>
+     <li>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="<%= cocktail.img_url %>" alt="<%= cocktail.name %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <p class="card-text"></p>
+            <%= link_to "See more", cocktail_path(cocktail) %>
+          </div>
+        </div>
+      </li>
+  <% end %>
+</div>

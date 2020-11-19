@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+body {
+ background-color: #FDFFFF;
+}
+
+li {
+  list-style: none;
+}
+
+.cocktail-cards {
+  display: flex;
+}
+
+h1 {
+  color: #E01965;
+}
