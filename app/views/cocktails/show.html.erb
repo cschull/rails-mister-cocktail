@@ -1,7 +1,7 @@
 <div class="cocktail-page">
   <img class="card-img-top" src="<%= @cocktail.img_url %>" alt="<%= @cocktail.name %>">
   <h1><%= @cocktail.name %></h1>
-  <%= link_to new_cocktail_dose_path do %>
+  <%= link_to new_cocktail_dose_path(@cocktail) do %>
     <i class="fas fa-flask"></i>
   <% end %>
   <%= link_to cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?"} do %>

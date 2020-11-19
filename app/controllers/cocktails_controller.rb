@@ -2,7 +2,6 @@ require 'json'
 require 'open-uri'
 
 class CocktailsController < ApplicationController
-
   def index
     @cocktails = Cocktail.all
   end
@@ -14,8 +13,11 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     @cocktail.img_url = custom_image(@cocktail)
-    @cocktail.save
-    redirect_to cocktail_path(@cocktail)
+    if @cocktail.save
+      redirect_to cocktail_path(@cocktail)
+    else
+      render :new
+    end
   end
 
   def show
@@ -41,5 +43,4 @@ class CocktailsController < ApplicationController
     img_url = cocktail_parsed['drinks'][0]['strDrinkThumb']
     return img_url
   end
-
 end
