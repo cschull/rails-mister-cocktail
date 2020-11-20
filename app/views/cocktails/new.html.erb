@@ -1,8 +1,15 @@
-<h1>Add a cocktail</h1>
+<div class="add-card d-flex">
+  <div class="add-card-image">
+    <img src="../../images/cocktail.jpg" alt="cocktail">
+  </div>
+  <div class="add-card-text">
+    <h1>Add a cocktail</h1>
 
-<%= simple_form_for @cocktail, input_html: {class: "form-group"} do |f| %>
-  <!-- pass in an array, to tell it you are creating a nested route (restaurant needs to be the first part of the route) -->
-    <!-- parent first, review object as the nested element (second) -->
-  <%= f.input :name, input_html: { class: 'form-control' } %>
-  <%= f.submit "Create cocktail", class: "btn btn-primary" %>
-<% end %>
+    <%= simple_form_for @cocktail, input_html: {class: "form-group"} do |f| %>
+      <!-- pass in an array, to tell it you are creating a nested route (restaurant needs to be the first part of the route) -->
+        <!-- parent first, review object as the nested element (second) -->
+      <%= f.input :name, input_html: { class: 'form-control' } %>
+      <%= f.submit "Create cocktail", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
