@@ -17,3 +17,11 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { initSelect2 } from '../components/init_select2';
+// we are importing the function
+// when the page loads or when we navigate from page to page (turbolinks - makes pageloading quicky)
+    // then call this function to set up select2s
+document.addEventListener("turbolinks:load", function() {
+  initSelect2();
+});

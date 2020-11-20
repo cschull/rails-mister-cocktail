@@ -1,6 +1,14 @@
-// Specific CSS for your home-page
+// Specific CSS for your home-pageb
+h1 {
+ color: white;
+}
+
 body {
- background-color: #FDFFFF;
+  background-color: #D3D4D6;
+}
+
+.add-cocktail {
+  color: white;
 }
 
 li {
@@ -9,8 +17,18 @@ li {
 
 .cocktail-cards {
   display: flex;
+  margin: 20px;
+}
+
+.card{
+  margin: 10px;
+  opacity: 0.9;
 }
 
 h1 {
   color: #E01965;
+}
+
+.header {
+  padding: 40px;
 }
