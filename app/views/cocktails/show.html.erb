@@ -1,3 +1,12 @@
+<%= link_to cocktails_path do %>
+  <div class="home-button d-flex text-wrap align-items-center justify-content-around">
+    <i class="fas fa-arrow-circle-left"></i>
+    <div class="home-button-text">
+      <p> Take me to the menu</p>
+    </div>
+  </div>
+ <% end %>
+
 <div class="cocktail-page">
   <img class="card-img-top" src="<%= @cocktail.img_url %>" alt="<%= @cocktail.name %>">
   <h1><%= @cocktail.name %></h1>
@@ -12,11 +21,5 @@
   <%= link_to new_cocktail_dose_path(@cocktail) do %>
     <i class="fas fa-flask"></i>
   <% end %>
-  <%= link_to cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?"} do %>
-    <i class="far fa-trash-alt"></i>
-  <% end %>
-  <div class="go-home">
-    <%= link_to "Home", cocktails_path %>
-  </div>
 </div>
 

@@ -2,7 +2,7 @@
 
 <div class="header">
 
-  <div class="menu-header">
+  <div class="menu-header" style="background-image: url('orange.jpg');">
     <h1>Cocktail Menu</h1>
   </div>
 
@@ -22,7 +22,12 @@
     <% @cocktails.each do |cocktail| %>
        <li>
           <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="<%= cocktail.img_url %>" alt="<%= cocktail.name %>">
+            <div class="img-container">
+              <img class="card-img-top" src="<%= cocktail.img_url %>" alt="<%= cocktail.name %>">
+              <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?"} do %>
+                <i class="far fa-times-circle"></i>
+              <% end %>
+            </div>
             <div class="card-body">
               <h5 class="card-title"><%= cocktail.name %></h5>
               <p class="card-text"></p>

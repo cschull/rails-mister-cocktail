@@ -6,9 +6,22 @@
   border: 1px solid white;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
+  border-left: 10px solid #CB5B28;
   margin: 40px;
   background-color: white;
   padding: 20px;
-  width: 50%;
+  width: 80%;
+  padding-right: 80px;
+  box-shadow: 4px 4px 10px 4px rgba(203,195,193,0.8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
 }
 
+#new-cocktail-img {
+  width: 300px;
+}
+
+.add-card-text {
+  padding: 20px;
+}

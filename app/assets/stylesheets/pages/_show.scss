@@ -1,6 +1,23 @@
 .cocktail-page {
   width: 40%;
-  margin: auto;
-  padding: 20px
+  margin: 20px auto ;
+  padding: 20px;
+  background-color: white;
 }
 
+.home-button {
+  color: #38609C;
+  background-color: white;
+  width: 20%;
+  margin: 10px;
+  align-items: center;
+  padding: 4px;
+}
+
+.fa-arrow-circle-left {
+  margin-right: 4px;
+}
+
+.home-button-text p {
+  margin: 0;
+}

@@ -11,6 +11,10 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
 }
@@ -31,4 +35,16 @@ h1 {
 
 .header {
   padding: 40px;
+
+}
+
+.menu-header {
+  background-image: src('orange.jpg')
+}
+
+.fa-times-circle {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: white;
 }
